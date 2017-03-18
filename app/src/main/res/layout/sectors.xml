@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/sectors">
+
+    <TextView
+        android:text="0:00.000"
+        style="@style/sector_text"
+        android:id="@+id/textSector1" />
+    <TextView
+        android:text="0:00.000"
+        style="@style/sector_text"
+        android:id="@+id/textSector2" />
+    <TextView
+        android:text="0:00.000"
+        style="@style/sector_text"
+        android:id="@+id/textSector3"
+  />
+    <TextView
+        android:text="0:00.000"
+        style="@style/sector_text"
+        android:id="@+id/textLap"
+        />
+</LinearLayout>

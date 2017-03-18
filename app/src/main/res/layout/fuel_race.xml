@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@android:color/black">
+    <TextView
+        android:id="@+id/describeFuelLastLap"
+        style="@style/describe_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fuel used Last Lap" />
+
+    <TextView
+        android:id="@+id/textFuelLastLap"
+        style="@style/fuel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/describeFuelLastLap"
+        tools:text="19.99"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/describeFuelAverage"
+        style="@style/describe_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/describeFuelLastLap"
+        android:layout_marginLeft="16dp"
+        android:text="Average fuel last Laps" />
+
+    <TextView
+        android:id="@+id/textFuelAverage"
+        style="@style/fuel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/describeFuelAverage"
+        android:layout_below="@id/describeFuelAverage"
+        tools:text="19.99"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/describeFuelToEnd"
+        style="@style/describe_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/describeFuelAverage"
+        android:text="Fuel to refill" />
+
+    <TextView
+        android:id="@+id/textFuelToEnd"
+        style="@style/fuel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/describeFuelToEnd"
+        android:layout_below="@id/describeFuelToEnd"
+        tools:text="19.99"
+        android:text="-" />
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/background_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/qualy_header"
+        android:id="@+id/header" />
+
+    <TextView
+        android:text="NOT CONNECTED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textConnected"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sector_header">
+        <TextView
+            android:text=""
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="P"
+            android:layout_width="@dimen/pos_width"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="Current"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="PB"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="TB"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="Leader"
+            style="@style/sector_text"
+            />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/rowNames">
+
+        <TextView
+            android:text="S1"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="S2"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="S3"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="Lap"
+            style="@style/sector_text"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/positions"
+        android:layout_toRightOf="@+id/rowNames"
+        android:layout_below="@+id/sector_header">
+
+        <TextView
+            tools:text="10"
+            android:text="-"
+            android:id="@+id/textPos1"
+            android:layout_width="@dimen/pos_width"
+            android:layout_height="wrap_content"
+            style="@style/pos_text"
+            />
+        <TextView
+            tools:text="10"
+            android:text="-"
+            android:id="@+id/textPos2"
+            android:layout_width="@dimen/pos_width"
+            android:layout_height="wrap_content"
+            style="@style/pos_text"
+            />
+        <TextView
+            tools:text="10"
+            android:text="-"
+            android:id="@+id/textPos3"
+            android:layout_width="@dimen/pos_width"
+            android:layout_height="wrap_content"
+            style="@style/pos_text"
+            />
+        <TextView
+            tools:text="10"
+            android:text="-"
+            android:id="@+id/textPosLap"
+            android:layout_width="@dimen/pos_width"
+            android:layout_height="wrap_content"
+            style="@style/pos_text"
+            />
+    </LinearLayout>
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:layout_toRightOf="@id/positions"
+        android:id="@+id/sectorCurrent"
+        layout="@layout/sectors" />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/sectorPB"
+        android:layout_toRightOf="@id/sectorCurrent"
+        layout="@layout/sectors" />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/sectorTB"
+        android:layout_toRightOf="@id/sectorPB"
+        layout="@layout/sectors" />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/sectorLeader"
+        android:layout_toRightOf="@id/sectorTB"
+        layout="@layout/sectors" />
+    <include
+        layout="@layout/tires"
+        android:id="@+id/tires"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rowNames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <include
+        layout="@layout/fuel_race"
+        android:id="@+id/fuel"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/tires"
+        android:layout_alignTop="@id/tires"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

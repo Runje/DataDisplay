@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@android:color/background_dark">
+
+    <TextView
+        android:text="Qualy"
+        style="@style/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+         />
+
+    <TextView
+        android:text="1"
+        style="@style/pos_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:layout_weight="1"
+        android:id="@+id/textPos" />
+
+    <TextView
+        android:text="-:--.---"
+        android:layout_weight="2"
+        style="@style/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textLap" />
+
+    <TextView
+        android:layout_weight="2"
+        android:text="-"
+        style="@style/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textDiff" />
+
+    <TextView
+        android:id="@+id/describeRemainingLaps"
+        style="@style/describe_text"
+        android:layout_width="75dp"
+        android:layout_gravity="left"
+        android:text="Remaining laps" />
+    <TextView
+        android:text="-"
+        android:layout_weight="1"
+        style="@style/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textRemainingLaps" />
+</LinearLayout>

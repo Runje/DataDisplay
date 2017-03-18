@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@android:color/background_dark">
+    <TextView
+        android:id="@+id/describeBoxenstop"
+        style="@style/describe_text"
+        android:layout_centerHorizontal="true"
+        android:text="Boxenstop" />
+    <TextView
+        android:text="Delta:"
+        android:layout_below="@+id/describeBoxenstop"
+        android:layout_marginTop="10dp"
+        style="@style/sector_text"
+        android:id="@+id/describeDelta"
+        />
+
+    <TextView
+        android:id="@+id/textDelta"
+        style="@style/sector_text"
+        android:layout_width="100dp"
+        android:layout_alignTop="@+id/describeDelta"
+        android:layout_toRightOf="@+id/describeDelta"
+        android:text="-"
+        tools:text="40s" />
+</RelativeLayout>

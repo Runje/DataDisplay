@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@android:color/background_dark"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/describeTire"
+        style="@style/describe_text"
+        android:layout_centerHorizontal="true"
+        android:text="Tires wear" />
+    <TextView
+        style="@style/tires_text"
+        android:id="@+id/textFrontLeft"
+        android:layout_below="@+id/describeTire"
+        android:text="100%" />
+    <TextView
+        style="@style/tires_text"
+        android:id="@+id/textFrontRight"
+        android:layout_alignTop="@+id/textFrontLeft"
+        android:layout_toRightOf="@id/textFrontLeft"
+        android:text="100%" />
+    <TextView
+        style="@style/tires_text"
+        android:id="@+id/textRearLeft"
+        android:layout_below="@id/textFrontLeft"
+        android:text="100%" />
+
+    <TextView
+        style="@style/tires_text"
+        android:id="@+id/textRearRight"
+        android:layout_below="@id/textFrontRight"
+        android:layout_toRightOf="@id/textRearLeft"
+        android:text="100%" />
+
+</RelativeLayout>

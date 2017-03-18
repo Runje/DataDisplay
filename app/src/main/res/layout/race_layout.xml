@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/background_dark"
+    android:id="@+id/race_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/race_header"
+        android:id="@id/header" />
+
+    <TextView
+        android:text="NOT CONNECTED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textConnected"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sector_header">
+        <TextView
+            android:text=""
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="Ahead"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="Current"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="Behind"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="PB"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="Fastest"
+            style="@style/sector_text"
+            />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/rowNames">
+
+        <TextView
+            android:text="S1"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="S2"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="S3"
+            style="@style/sector_text"
+            />
+        <TextView
+            android:text="Lap"
+            style="@style/sector_text"
+
+            />
+    </LinearLayout>
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:layout_toRightOf="@id/rowNames"
+        android:id="@+id/sectorAhead"
+        layout="@layout/sectors" />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/sectorCurrent"
+        android:layout_toRightOf="@id/sectorAhead"
+        layout="@layout/sectors" />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/sectorBehind"
+        android:layout_toRightOf="@id/sectorCurrent"
+        layout="@layout/sectors" />
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/sectorPB"
+        android:layout_toRightOf="@id/sectorBehind"
+        layout="@layout/sectors" />
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sector_header"
+        android:id="@+id/sectorFastest"
+        android:layout_toRightOf="@id/sectorPB"
+        layout="@layout/sectors" />
+
+    <include
+        layout="@layout/tires"
+        android:id="@+id/tires"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rowNames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/tires_forecast"
+        android:id="@+id/tires_forecast"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/tires"
+        android:layout_alignTop="@id/tires"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/tires_forecast"
+        android:id="@+id/tires_forecast2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tires_forecast"
+        android:layout_alignLeft="@id/tires_forecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include
+        layout="@layout/tires_forecast"
+        android:id="@+id/tires_forecast3"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tires_forecast2"
+        android:layout_alignLeft="@id/tires_forecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <include
+        layout="@layout/fuel_race"
+        android:id="@+id/fuel"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/tires_forecast"
+        android:layout_alignTop="@id/tires"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <include
+        layout="@layout/boxenstop"
+        android:id="@+id/boxenstop"
+        android:layout_marginTop = "10dp"
+        android:layout_below="@id/tires"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
