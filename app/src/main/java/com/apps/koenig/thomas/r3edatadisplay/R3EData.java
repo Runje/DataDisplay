@@ -47,7 +47,7 @@ public class R3EData {
         sectorTimesBestLapLeader = msg.sectorTimesSessionBestLap;
         sectorTimesSelfBestLap = msg.sectorTimesSelfBestLap;
         sectorTimesSelfCurrLap = msg.sectorTimesSelfCurrLap;
-        if (position > 1) {
+        if (position > 1 && msg.drivers.length > 0) {
             sectorTimesAhead = msg.drivers[position - 2].sectorTimesCurrent;
         }
         else {

@@ -75,12 +75,13 @@ public class R3EDisplayData {
         tireWearFactorA  = new float[] { INVALID_FACTOR, INVALID_FACTOR, INVALID_FACTOR, INVALID_FACTOR};
     }
 
-    public void update(R3EMessage message)
+    public synchronized void update(R3EMessage message)
     {
         if (startOfNewSession(message)) {
             Log.i(LogKey, "New Session");
             reset();
         }
+        lastSessionType = message.sessionType == -1 ? lastSessionType : message.sessionType;
         layoutLength = message.layoutLength;
 
         quitStint = message.inMenu && !message.paused;
@@ -88,7 +89,6 @@ public class R3EDisplayData {
         if (quitStint) {
             fuelLeftBegin = INVALID_FUEL;
             fuelLaps = INVALID_LAPS;
-            lastSessionType = message.sessionType;
 
         }
         //Log.i(LogKey,"Update: distance: " + message.lapDistance);
@@ -185,7 +185,7 @@ public class R3EDisplayData {
             lastLeaderLapDistance = message.drivers[0].lapDistance;
         }
 
-        lastSessionType = message.sessionType;
+
 
     }
 
