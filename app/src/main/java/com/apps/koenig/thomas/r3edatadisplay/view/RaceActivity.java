@@ -7,8 +7,8 @@ import android.widget.TextView;
 
 import com.apps.koenig.thomas.r3edatadisplay.R;
 import com.apps.koenig.thomas.r3edatadisplay.R3EApp;
-import com.apps.koenig.thomas.r3edatadisplay.R3EData;
-import com.apps.koenig.thomas.r3edatadisplay.R3EDisplayData;
+import com.apps.koenig.thomas.r3edatadisplay.model.R3EData;
+import com.apps.koenig.thomas.r3edatadisplay.model.R3EDisplayData;
 import com.apps.koenig.thomas.r3edatadisplay.communication.R3EConnectionListener;
 
 public class RaceActivity extends R3EActivity implements R3EConnectionListener {

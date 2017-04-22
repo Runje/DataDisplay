@@ -10,14 +10,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".view.QualyActivity" >
+        <activity android:name=".view.QualyActivity" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.RaceActivity"></activity>
+        <activity android:name=".view.RaceActivity" android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

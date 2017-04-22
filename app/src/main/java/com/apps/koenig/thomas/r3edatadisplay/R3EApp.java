@@ -8,6 +8,7 @@ import com.apps.koenig.thomas.r3edatadisplay.communication.MessageReceiveListene
 import com.apps.koenig.thomas.r3edatadisplay.communication.R3EConnection;
 import com.apps.koenig.thomas.r3edatadisplay.communication.R3EConnectionListener;
 import com.apps.koenig.thomas.r3edatadisplay.communication.R3EMessage;
+import com.apps.koenig.thomas.r3edatadisplay.model.R3EDisplayData;
 
 import java.util.ArrayList;
 import java.util.List;

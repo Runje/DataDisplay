@@ -18,4 +18,16 @@ public class ByteUtils {
         for (i = 0; i < bytes.length && bytes[i] != 0; i++) { }
         return new String(bytes, 0, i ,Charset.forName(encoding)).trim();
     }
+
+    public static String getString(ByteBuffer buffer) {
+        StringBuilder sb = new StringBuilder(buffer.limit());
+        while (buffer.remaining() > 0) // safer
+        {
+            char c = (char)buffer.get();
+            if (c == '\0') break;
+            sb.append(c);
+        }
+
+        return sb.toString();
+    }
 }

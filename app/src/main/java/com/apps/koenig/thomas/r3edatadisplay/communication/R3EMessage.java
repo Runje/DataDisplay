@@ -1,7 +1,7 @@
 package com.apps.koenig.thomas.r3edatadisplay.communication;
 
-import com.apps.koenig.thomas.r3edatadisplay.R3EDriver;
-import com.apps.koenig.thomas.r3edatadisplay.Sectors;
+import com.apps.koenig.thomas.r3edatadisplay.model.R3EDriver;
+import com.apps.koenig.thomas.r3edatadisplay.model.Sectors;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

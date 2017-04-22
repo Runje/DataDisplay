@@ -1,8 +1,13 @@
 package com.apps.koenig.thomas.r3edatadisplay.communication;
 
+import com.apps.koenig.thomas.r3edatadisplay.model.DisplayData;
+import com.apps.koenig.thomas.r3edatadisplay.model.QualyData;
+import com.apps.koenig.thomas.r3edatadisplay.model.RaceData;
+
 import org.joda.time.DateTime;
 
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -50,16 +55,45 @@ public class R3EConnection {
         connection = new UDPReceiveConnection(port, new BytesReceivedListener() {
             @Override
             public void onBytesReceived(ByteBuffer buffer) {
-                R3EMessage msg = new R3EMessage(buffer);
+                DisplayData displayData = parseMessage(buffer);
+
                 //System.out.println(msg.toString());
                 lastMessageReceived = DateTime.now();
                 if (listener != null) {
-                    listener.onReceiveMessage(msg);
                 }
             }
+
+
         });
         connection.start();
         running = true;
+    }
+
+    private DisplayData parseMessage(ByteBuffer buffer) {
+        buffer.order(ByteOrder.LITTLE_ENDIAN);
+        short version = buffer.getShort();
+        byte type = buffer.get();
+        DisplayData data = null;
+        if (type == 0)
+        {
+            data = new DisplayData(buffer);
+        }
+        else if(type == 1)
+        {
+            // qualy
+            data = new QualyData(buffer);
+        }
+        else if (type == 2)
+        {
+            // race
+            data = new RaceData(buffer);
+        }
+        else
+        {
+            // wrong type
+        }
+
+        return data;
     }
 
     private void startConnectionListener() {

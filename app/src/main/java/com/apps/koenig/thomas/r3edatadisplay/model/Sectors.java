@@ -1,4 +1,4 @@
-package com.apps.koenig.thomas.r3edatadisplay;
+package com.apps.koenig.thomas.r3edatadisplay.model;
 
 /**
  * Created by Thomas on 26.02.2017.

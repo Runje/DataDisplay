@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.apps.koenig.thomas.r3edatadisplay.R;
-import com.apps.koenig.thomas.r3edatadisplay.R3EDisplayData;
+import com.apps.koenig.thomas.r3edatadisplay.model.R3EDisplayData;
 
 /**
  * Created by Thomas on 10.03.2017.

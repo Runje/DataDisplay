@@ -1,4 +1,4 @@
-package com.apps.koenig.thomas.r3edatadisplay;
+package com.apps.koenig.thomas.r3edatadisplay.model;
 
 import com.apps.koenig.thomas.r3edatadisplay.communication.R3EMessage;
 
